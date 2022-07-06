@@ -4,6 +4,10 @@ var bodyParser = require('body-parser')
 
 app.use(bodyParser.json({extended: false}));
 
+app.get('/split-payments/compute', (req, res) => {
+    res.send('Welcome To The Demo page ')
+  });
+
 // POST REQUEST 
 app.post("/split-payments/compute", (req, res, next) => {
   const payload = req.body;
